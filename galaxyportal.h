@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::GalaxyPortal *ui;
+
+public slots:
+    // accepts login
+    void doLogin(QString& username, QString& password);
 };
 
 #endif // GALAXYPORTAL_H

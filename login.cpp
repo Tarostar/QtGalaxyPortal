@@ -37,7 +37,7 @@ void Login::setupGUI(){
     connect(buttons->button(QDialogButtonBox::Cancel),
              SIGNAL(clicked()),
              this,
-             SLOT(close())
+             SLOT(reject())
              );
 
     connect( buttons->button(QDialogButtonBox::Ok),
@@ -71,7 +71,6 @@ void Login::setUsername(QString &username)
     if( ! found )
     {
         int index = comboUsername->count();
-        qDebug() << "Select username " << index;
         comboUsername->addItem(username);
         comboUsername->setCurrentIndex(index);
     }
@@ -90,7 +89,7 @@ void Login::slotAcceptLogin()
     QString username = comboUsername->currentText();
     QString password = editPassword->text();
     emit acceptLogin(username, password);
-    close();
+    accept();
 }
 
 void Login::setUsernamesList(const QStringList &usernames)
