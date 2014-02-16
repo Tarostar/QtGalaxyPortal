@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        galaxyportal.cpp
+        galaxyportal.cpp \
+    login.cpp
 
-HEADERS  += galaxyportal.h
+HEADERS  += galaxyportal.h \
+    login.h
 
 FORMS    += galaxyportal.ui
