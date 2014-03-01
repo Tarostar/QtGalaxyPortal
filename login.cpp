@@ -37,8 +37,7 @@ void Login::setupGUI(){
     connect(buttons->button(QDialogButtonBox::Cancel),
              SIGNAL(clicked()),
              this,
-             SLOT(reject())
-             );
+             SLOT(reject()));
 
     connect( buttons->button(QDialogButtonBox::Ok),
              SIGNAL(clicked()),

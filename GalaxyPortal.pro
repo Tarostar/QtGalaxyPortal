@@ -4,6 +4,8 @@
 #
 #-------------------------------------------------
 
+include(GalaxyPortalSrc.pri)
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -12,11 +14,7 @@ TARGET = GalaxyPortal
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        galaxyportal.cpp \
-    login.cpp
-
-HEADERS  += galaxyportal.h \
-    login.h
-
 FORMS    += galaxyportal.ui
+
+OTHER_FILES += \
+    GalaxyPortalSrc.pri
