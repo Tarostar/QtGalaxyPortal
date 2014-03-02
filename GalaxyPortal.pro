@@ -18,3 +18,6 @@ FORMS    += galaxyportal.ui
 
 OTHER_FILES += \
     GalaxyPortalSrc.pri
+
+RESOURCES += \
+    galaxyResources.qrc
