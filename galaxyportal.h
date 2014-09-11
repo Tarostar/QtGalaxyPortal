@@ -2,6 +2,10 @@
 #define GALAXYPORTAL_H
 
 #include <QMainWindow>
+class QProgressBar;
+class QNetworkAccessManager;
+class QNetworkReply;
+class QLabel;
 
 /*namespace Ui {
 class GalaxyPortal;
@@ -20,7 +24,10 @@ public slots:
     void doLogin(QString& username, QString& password);
     void connect();
     void helpAbout();
+    void slotRequestFinished(QNetworkReply *reply);
+    void slotSetProgress(qint64, qint64);
 
+    void onResult(QNetworkReply* reply);
 
 private:
     void createActions();
@@ -31,6 +38,13 @@ private:
     QAction *connectAction;
     QAction *exitAction;
     QAction *aboutGPAction;
+
+    QLabel *m_label;
+    QProgressBar *m_progress;
+
+    QNetworkAccessManager *m_network;
+
+    QNetworkReply* m_currentReply;
 
 };
 
