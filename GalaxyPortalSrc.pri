@@ -1,6 +1,6 @@
-SOURCES += ../GalaxyPortal/main.cpp \
-    ../GalaxyPortal/galaxyportal.cpp \
-    ../GalaxyPortal/login.cpp
+SOURCES += main.cpp \
+    galaxyportal.cpp \
+    login.cpp
 
-HEADERS  += ../GalaxyPortal/galaxyportal.h \
-    ../GalaxyPortal/login.h
+HEADERS  += galaxyportal.h \
+    login.h
